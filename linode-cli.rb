@@ -2,9 +2,8 @@ require 'formula'
 
 class LinodeCli < Formula
   homepage 'https://github.com/linode/cli'
-  version '0.2.5'
-  sha1 'e557279d2d6b9ee1e7ce9affa6caa9ff4a016683'
-  url 'https://github.com/linode/cli/archive/v0.2.5.tar.gz'
+  url 'https://github.com/linode/cli/archive/v0.3.1.tar.gz'
+  sha1 'd84a757409ab76a73d1541179c8eab197abe45d2'
 
   resource 'JSON' do
     url 'http://www.cpan.org/authors/id/M/MA/MAKAMAKA/JSON-2.90.tar.gz'
@@ -149,7 +148,8 @@ class LinodeCli < Formula
   def install
     ENV.prepend_create_path 'PERL5LIB', libexec+'lib/perl5/site_perl'
     binaries = %w{
-      linode linode-linode linode-account linode-domain linode-stackscript
+      linode linode-linode linode-account linode-domain linode-nodebalancer
+      linode-stackscript
     }
     reading_materials = %w{LICENSE README.md}
 
