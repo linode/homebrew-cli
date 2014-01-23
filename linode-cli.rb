@@ -2,8 +2,8 @@ require 'formula'
 
 class LinodeCli < Formula
   homepage 'https://github.com/linode/cli'
-  url 'https://github.com/linode/cli/archive/v0.3.1.tar.gz'
-  sha1 'd84a757409ab76a73d1541179c8eab197abe45d2'
+  url 'https://github.com/linode/cli/archive/v0.3.2.tar.gz'
+  sha1 'fab9f35308d771a73027394d863e8c447ded71fd'
 
   resource 'JSON' do
     url 'http://www.cpan.org/authors/id/M/MA/MAKAMAKA/JSON-2.90.tar.gz'
@@ -35,19 +35,34 @@ class LinodeCli < Formula
     sha1 '85f8dbcad22f2680775a185ce91a42c89e0ad2a8'
   end
 
+  resource 'Compress::Raw::Bzi' do
+    url 'http://www.cpan.org/authors/id/P/PM/PMQS/Compress-Raw-Bzip2-2.063.tar.gz'
+    sha1 '8fef3e4c66d98b29b656b0315434a13ee83a8b4a'
+  end
+
+  resource 'Compress::Raw::Zlib' do
+    url 'http://www.cpan.org/authors/id/P/PM/PMQS/Compress-Raw-Zlib-2.063.tar.gz'
+    sha1 '914e95f14846df875fbf2dfb573ab55bef776b33'
+  end
+
+  resource 'IO::Compress' do
+    url 'http://www.cpan.org/authors/id/P/PM/PMQS/IO-Compress-2.063.tar.gz'
+    sha1 'cc2bd46c8bf9f0dab90e6de74f06ee3bec195275'
+  end
+
   resource 'HTTP::Message' do
     url 'http://www.cpan.org/authors/id/G/GA/GAAS/HTTP-Message-6.06.tar.gz'
     sha1 '4a88688c28e6581fab9b2eca8d0e320e96bef1ad'
   end
 
-  resource 'File::Listing' do
-    url 'http://www.cpan.org/authors/id/G/GA/GAAS/File-Listing-6.04.tar.gz'
-    sha1 '02a41fe1b91f3f198712965360192f31d6d8d74e'
-  end
-
   resource 'HTTP::Negotiate' do
     url 'http://www.cpan.org/authors/id/G/GA/GAAS/HTTP-Negotiate-6.01.tar.gz'
     sha1 '4a4974639d9b64f7132cb075f551f7293f788c62'
+  end
+
+  resource 'File::Listing' do
+    url 'http://www.cpan.org/authors/id/G/GA/GAAS/File-Listing-6.04.tar.gz'
+    sha1 '02a41fe1b91f3f198712965360192f31d6d8d74e'
   end
 
   resource 'HTML::Tagset' do
@@ -91,18 +106,18 @@ class LinodeCli < Formula
   end
 
   resource 'Try::Tiny' do
-    url 'http://www.cpan.org/authors/id/D/DO/DOY/Try-Tiny-0.18.tar.gz'
-    sha1 '1910c037e4b7367c58d2e2f06464863bdee2b06a'
+    url 'http://www.cpan.org/authors/id/D/DO/DOY/Try-Tiny-0.19.tar.gz'
+    sha1 '78613f8c77793032ddf10a88ef5182592b96d553'
   end
 
   resource 'Net::SSLeay' do
-    url 'http://www.cpan.org/authors/id/M/MI/MIKEM/Net-SSLeay-1.57.tar.gz'
-    sha1 '1a3fc334988fd08b4a0ffe1823096249cc18a6cd'
+    url 'http://www.cpan.org/authors/id/M/MI/MIKEM/Net-SSLeay-1.58.tar.gz'
+    sha1 'fe0f5a8b3d66c2b5371822f88b78dac42db67c79'
   end
 
   resource 'IO::Socket::SSL' do
-    url 'http://www.cpan.org/authors/id/S/SU/SULLR/IO-Socket-SSL-1.963.tar.gz'
-    sha1 '642bfde31b09baea5eb10241466d84f5a40a0e80'
+    url 'http://www.cpan.org/authors/id/S/SU/SULLR/IO-Socket-SSL-1.966.tar.gz'
+    sha1 '6d3d5ee71ebe44c59acd0be7523f4634b36e09de'
   end
 
   resource 'LWP::Protocol::https' do
@@ -120,6 +135,46 @@ class LinodeCli < Formula
     sha1 '5f7cc2392accaf47100cf2a57c5513c3fa29b1dc'
   end
 
+  resource 'Scalar::List::Utils' do
+    url 'http://www.cpan.org/authors/id/P/PE/PEVANS/Scalar-List-Utils-1.38.tar.gz'
+    sha1 'd2c6c5bd632e1fdf1ce5e59720bff1fe5992d997'
+  end
+
+  resource 'Test::Simple' do
+    url 'http://www.cpan.org/authors/id/R/RJ/RJBS/Test-Simple-1.001002.tar.gz'
+    sha1 '179723fbb311d4785ede817ba7ecec43fb19d6d7'
+  end
+
+  resource 'CPAN::Meta::YAML' do
+    url 'http://www.cpan.org/authors/id/D/DA/DAGOLDEN/CPAN-Meta-YAML-0.010.tar.gz'
+    sha1 'e594e3cd2b371bac16d4186cde4187ef4b6d12b2'
+  end
+
+  resource 'JSON::PP' do
+    url 'http://www.cpan.org/authors/id/M/MA/MAKAMAKA/JSON-PP-2.27203.tar.gz'
+    sha1 '7659cd8b58ed42eae2c069f3181a8436c65ba895'
+  end
+
+  resource 'Parse::CPAN::Meta' do
+    url 'http://www.cpan.org/authors/id/D/DA/DAGOLDEN/Parse-CPAN-Meta-1.4409.tar.gz'
+    sha1 '40378a62c71c44656744051fa7a70071ab409bba'
+  end
+
+  resource 'version' do
+    url 'http://www.cpan.org/authors/id/J/JP/JPEACOCK/version-0.9907.tar.gz'
+    sha1 'e34666e7e9e4205fbac24ca8772150c0fd2a4fd5'
+  end
+
+  resource 'CPAN::Meta::Requirements' do
+    url 'http://www.cpan.org/authors/id/D/DA/DAGOLDEN/CPAN-Meta-Requirements-2.125.tar.gz'
+    sha1 '1d0d20024c531354094ca9a1609fad694b8db7d3'
+  end
+
+  resource 'CPAN::Meta' do
+    url 'http://www.cpan.org/authors/id/D/DA/DAGOLDEN/CPAN-Meta-2.133380.tar.gz'
+    sha1 '3845dfdcb4e9ce12a1a9ff825bb6c45d725ac422'
+  end
+
   resource 'ExtUtils::Helpers' do
     url 'http://www.cpan.org/authors/id/L/LE/LEONT/ExtUtils-Helpers-0.021.tar.gz'
     sha1 '7cdb1c408095cd7e91eb28df0bbfc19bbf07b28e'
@@ -135,9 +190,34 @@ class LinodeCli < Formula
     sha1 '0faf32f66444ad6844aef70add175d75f2c069b2'
   end
 
+  resource 'Module::Metadata' do
+    url 'http://www.cpan.org/authors/id/E/ET/ETHER/Module-Metadata-1.000019.tar.gz'
+    sha1 '38b4efdfe83f2e5db057769b3753504a2a89dfd6'
+  end
+
+  resource 'Perl::OSType' do
+    url 'http://www.cpan.org/authors/id/D/DA/DAGOLDEN/Perl-OSType-1.007.tar.gz'
+    sha1 'b04781569df225919440d1ca4124c835457c8910'
+  end
+
+  resource 'ExtUtil' do
+    url 'http://www.cpan.org/authors/id/A/AM/AMBS/ExtUtils/ExtUtils-CBuilder-0.280212.tar.gz'
+    sha1 '9d96ad35fc73dd450488e1d993146dc7bbe06483'
+  end
+
+  resource 'ExtUtils::ParseXS' do
+    url 'http://www.cpan.org/authors/id/S/SM/SMUELLER/ExtUtils-ParseXS-3.22.tar.gz'
+    sha1 'fe70cf62e66775c04436d58d18f4773924630a98'
+  end
+
+  resource 'Module::Build' do
+    url 'http://www.cpan.org/authors/id/L/LE/LEONT/Module-Build-0.4204.tar.gz'
+    sha1 'a4aa8e31d290ec2a2857393231fdee9e97730596'
+  end
+
   resource 'Module::Build::Tiny' do
-    url 'http://www.cpan.org/authors/id/L/LE/LEONT/Module-Build-Tiny-0.030.tar.gz'
-    sha1 'd0e9cab82850195dba8b1eff6f6adf2dded1e9a7'
+    url 'http://www.cpan.org/authors/id/L/LE/LEONT/Module-Build-Tiny-0.034.tar.gz'
+    sha1 '232111ae43304a0199c8a300a631fa6618361d70'
   end
 
   resource 'WebService::Linode' do
@@ -146,100 +226,115 @@ class LinodeCli < Formula
   end
 
   def install
-    ENV.prepend_create_path 'PERL5LIB', libexec+'lib/perl5/site_perl'
+    ENV.prepend_create_path 'PERL5LIB', libexec+'lib/perl5'
     binaries = %w{
-      linode linode-linode linode-account linode-domain linode-nodebalancer
-      linode-stackscript
+      linode linode-linode linode-account linode-domain linode-stackscript
+      linode-nodebalancer
     }
-    reading_materials = %w{LICENSE README.md}
+    docs = %w{Changes LICENSE README.md}
 
     resource('JSON').stage do
-      system 'perl', 'Makefile.PL', "PREFIX=#{libexec}"
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
       system 'make', 'install'
     end
 
     resource('URI').stage do
-      system 'perl', 'Makefile.PL', "PREFIX=#{libexec}"
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
       system 'make', 'install'
     end
 
     resource('LWP::MediaTypes').stage do
-      system 'perl', 'Makefile.PL', "PREFIX=#{libexec}"
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
       system 'make', 'install'
     end
 
     resource('Encode::Locale').stage do
-      system 'perl', 'Makefile.PL', "PREFIX=#{libexec}"
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
       system 'make', 'install'
     end
 
     resource('IO::HTML').stage do
-      system 'perl', 'Makefile.PL', "PREFIX=#{libexec}"
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
       system 'make', 'install'
     end
 
     resource('HTTP::Date').stage do
-      system 'perl', 'Makefile.PL', "PREFIX=#{libexec}"
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
+      system 'make', 'install'
+    end
+
+    resource('Compress::Raw::Bzi').stage do
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
+      system 'make', 'install'
+    end
+
+    resource('Compress::Raw::Zlib').stage do
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
+      system 'make', 'install'
+    end
+
+    resource('IO::Compress').stage do
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
       system 'make', 'install'
     end
 
     resource('HTTP::Message').stage do
-      system 'perl', 'Makefile.PL', "PREFIX=#{libexec}"
-      system 'make', 'install'
-    end
-
-    resource('File::Listing').stage do
-      system 'perl', 'Makefile.PL', "PREFIX=#{libexec}"
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
       system 'make', 'install'
     end
 
     resource('HTTP::Negotiate').stage do
-      system 'perl', 'Makefile.PL', "PREFIX=#{libexec}"
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
+      system 'make', 'install'
+    end
+
+    resource('File::Listing').stage do
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
       system 'make', 'install'
     end
 
     resource('HTML::Tagset').stage do
-      system 'perl', 'Makefile.PL', "PREFIX=#{libexec}"
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
       system 'make', 'install'
     end
 
     resource('HTML::Parser').stage do
-      system 'perl', 'Makefile.PL', "PREFIX=#{libexec}"
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
       system 'make', 'install'
     end
 
     resource('HTTP::Daemon').stage do
-      system 'perl', 'Makefile.PL', "PREFIX=#{libexec}"
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
       system 'make', 'install'
     end
 
     resource('Net::HTTP').stage do
-      system 'perl', 'Makefile.PL', "PREFIX=#{libexec}"
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
       system 'make', 'install'
     end
 
     resource('HTTP::Cookies').stage do
-      system 'perl', 'Makefile.PL', "PREFIX=#{libexec}"
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
       system 'make', 'install'
     end
 
     resource('WWW::RobotRules').stage do
-      system 'perl', 'Makefile.PL', "PREFIX=#{libexec}"
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
       system 'make', 'install'
     end
 
     resource('libwww::perl').stage do
-      system 'perl', 'Makefile.PL', "PREFIX=#{libexec}"
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
       system 'make', 'install'
     end
 
     resource('Mozilla::CA').stage do
-      system 'perl', 'Makefile.PL', "PREFIX=#{libexec}"
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
       system 'make', 'install'
     end
 
     resource('Try::Tiny').stage do
-      system 'perl', 'Makefile.PL', "PREFIX=#{libexec}"
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
       system 'make', 'install'
     end
 
@@ -247,61 +342,125 @@ class LinodeCli < Formula
       inreplace 'inc/Module/Install/PRIVATE/Net/SSLeay.pm' do |s|
         s.gsub! 'if ( $self->prompt(', 'if ( 0 && $self->prompt('
       end
-      system 'perl', 'Makefile.PL', "PREFIX=#{libexec}"
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
       system 'make', 'install'
     end
 
     resource('IO::Socket::SSL').stage do
-      system 'perl', 'Makefile.PL', "PREFIX=#{libexec}"
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
       system 'make', 'install'
     end
 
     resource('LWP::Protocol::https').stage do
-      system 'perl', 'Makefile.PL', "PREFIX=#{libexec}"
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
       system 'make', 'install'
     end
 
     resource('Crypt::SSLeay').stage do
-      system 'perl', 'Makefile.PL', "PREFIX=#{libexec}", '-n'
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}", '-n'
       system 'make', 'install'
     end
 
     resource('Test::Harness').stage do
-      system 'perl', 'Makefile.PL', "PREFIX=#{libexec}"
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
+      system 'make', 'install'
+    end
+
+    resource('Scalar::List::Utils').stage do
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
+      system 'make', 'install'
+    end
+
+    resource('Test::Simple').stage do
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
+      system 'make', 'install'
+    end
+
+    resource('CPAN::Meta::YAML').stage do
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
+      system 'make', 'install'
+    end
+
+    resource('JSON::PP').stage do
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
+      system 'make', 'install'
+    end
+
+    resource('Parse::CPAN::Meta').stage do
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
+      system 'make', 'install'
+    end
+
+    resource('version').stage do
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
+      system 'make', 'install'
+    end
+
+    resource('CPAN::Meta::Requirements').stage do
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
+      system 'make', 'install'
+    end
+
+    resource('CPAN::Meta').stage do
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
       system 'make', 'install'
     end
 
     resource('ExtUtils::Helpers').stage do
-      system 'perl', 'Makefile.PL', "PREFIX=#{libexec}"
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
       system 'make', 'install'
     end
 
     resource('ExtUtils::Config').stage do
-      system 'perl', 'Makefile.PL', "PREFIX=#{libexec}"
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
       system 'make', 'install'
     end
 
     resource('ExtUtils::InstallPaths').stage do
-      system 'perl', 'Makefile.PL', "PREFIX=#{libexec}"
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
+      system 'make', 'install'
+    end
+
+    resource('Module::Metadata').stage do
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
+      system 'make', 'install'
+    end
+
+    resource('Perl::OSType').stage do
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
+      system 'make', 'install'
+    end
+
+    resource('ExtUtil').stage do
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
+      system 'make', 'install'
+    end
+
+    resource('ExtUtils::ParseXS').stage do
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
+      system 'make', 'install'
+    end
+
+    resource('Module::Build').stage do
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
       system 'make', 'install'
     end
 
     resource('Module::Build::Tiny').stage do
       system 'perl', 'Build.PL'
       system './Build', 'build'
-      system './Build', 'install', "--prefix=#{libexec}"
+      system './Build', 'install', "--install_base=#{libexec}"
     end
 
     resource('WebService::Linode').stage do
       system 'perl', 'Build.PL'
       system './Build', 'build'
-      system './Build', 'install', "--prefix=#{libexec}"
+      system './Build', 'install', "--install_base=#{libexec}"
     end
 
     binaries.each do |b|
       inreplace b do |s|
-        s.gsub! "use lib '/usr/lib/linode-cli';",
-                "use lib '#{libexec}/lib/perl5/site_perl';"
+        s.gsub! "use lib '/usr/lib/linode-cli';", ''
         s.gsub! 'use lib "$FindBin::RealBin/lib";',
                 "use lib '#{lib}/perl5/site_perl';"
       end
@@ -309,6 +468,7 @@ class LinodeCli < Formula
 
     system 'perl', 'Makefile.PL', "PREFIX=#{prefix}"
     system 'make', 'install'
-    prefix.install reading_materials
+    bin.env_script_all_files(libexec+"bin", :PERL5LIB => ENV['PERL5LIB'])
+    doc.install docs
   end
 end
