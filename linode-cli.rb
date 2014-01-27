@@ -2,8 +2,8 @@ require 'formula'
 
 class LinodeCli < Formula
   homepage 'https://github.com/linode/cli'
-  url 'https://github.com/linode/cli/archive/v0.3.2.tar.gz'
-  sha1 'fab9f35308d771a73027394d863e8c447ded71fd'
+  url 'https://github.com/linode/cli/archive/v1.0.0.tar.gz'
+  sha1 'd61a1c487818271c594c8ec4da31fca338943bac'
 
   resource 'JSON' do
     url 'http://www.cpan.org/authors/id/M/MA/MAKAMAKA/JSON-2.90.tar.gz'
@@ -221,8 +221,8 @@ class LinodeCli < Formula
   end
 
   resource 'WebService::Linode' do
-    url 'http://www.cpan.org/authors/id/M/MI/MIKEGRB/WebService-Linode-0.16.tar.gz'
-    sha1 'b95f43035e361c512c88145abe9ebb9844d73f91'
+    url 'http://www.cpan.org/authors/id/M/MI/MIKEGRB/WebService-Linode-0.17.tar.gz'
+    sha1 'e3a40c7765e1f836935ffccd951f977d12a51067'
   end
 
   def install
@@ -460,7 +460,6 @@ class LinodeCli < Formula
 
     binaries.each do |b|
       inreplace b do |s|
-        s.gsub! "use lib '/usr/lib/linode-cli';", ''
         s.gsub! 'use lib "$FindBin::RealBin/lib";',
                 "use lib '#{lib}/perl5/site_perl';"
       end
@@ -470,5 +469,14 @@ class LinodeCli < Formula
     system 'make', 'install'
     bin.env_script_all_files(libexec+"bin", :PERL5LIB => ENV['PERL5LIB'])
     doc.install docs
+  end
+
+  test do
+    system "#{bin}/linode", '--version'
+    system "#{bin}/linode-linode", '--help'
+    system "#{bin}/linode-account", '--help'
+    system "#{bin}/linode-domain", '--help'
+    system "#{bin}/linode-stackscript", '--help'
+    system "#{bin}/linode-nodebalancer", '--help'
   end
 end
