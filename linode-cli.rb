@@ -2,8 +2,8 @@ require 'formula'
 
 class LinodeCli < Formula
   homepage 'https://github.com/linode/cli'
-  url 'https://github.com/linode/cli/archive/v1.0.0.tar.gz'
-  sha1 'd61a1c487818271c594c8ec4da31fca338943bac'
+  url 'https://github.com/linode/cli/archive/v1.1.0.tar.gz'
+  sha1 '4df836c1e4f09a21f4187850a1815f3992c912c2'
 
   resource 'JSON' do
     url 'http://www.cpan.org/authors/id/M/MA/MAKAMAKA/JSON-2.90.tar.gz'
@@ -36,18 +36,18 @@ class LinodeCli < Formula
   end
 
   resource 'Compress::Raw::Bzi' do
-    url 'http://www.cpan.org/authors/id/P/PM/PMQS/Compress-Raw-Bzip2-2.063.tar.gz'
-    sha1 '8fef3e4c66d98b29b656b0315434a13ee83a8b4a'
+    url 'http://www.cpan.org/authors/id/P/PM/PMQS/Compress-Raw-Bzip2-2.064.tar.gz'
+    sha1 '9c39d0ffd5414c052efa0893f03f23e59229ee8f'
   end
 
   resource 'Compress::Raw::Zlib' do
-    url 'http://www.cpan.org/authors/id/P/PM/PMQS/Compress-Raw-Zlib-2.063.tar.gz'
-    sha1 '914e95f14846df875fbf2dfb573ab55bef776b33'
+    url 'http://www.cpan.org/authors/id/P/PM/PMQS/Compress-Raw-Zlib-2.065.tar.gz'
+    sha1 '09e7957e9ebedb1ba26524136adcaffe76c70cef'
   end
 
   resource 'IO::Compress' do
-    url 'http://www.cpan.org/authors/id/P/PM/PMQS/IO-Compress-2.063.tar.gz'
-    sha1 'cc2bd46c8bf9f0dab90e6de74f06ee3bec195275'
+    url 'http://www.cpan.org/authors/id/P/PM/PMQS/IO-Compress-2.064.tar.gz'
+    sha1 '1b90096381cbabe6498985b3172b2dce99a66e94'
   end
 
   resource 'HTTP::Message' do
@@ -161,8 +161,8 @@ class LinodeCli < Formula
   end
 
   resource 'version' do
-    url 'http://www.cpan.org/authors/id/J/JP/JPEACOCK/version-0.9907.tar.gz'
-    sha1 'e34666e7e9e4205fbac24ca8772150c0fd2a4fd5'
+    url 'http://www.cpan.org/authors/id/J/JP/JPEACOCK/version-0.9908.tar.gz'
+    sha1 'e4514048db90dcb56a8b5a9a58ae552e8880edb7'
   end
 
   resource 'CPAN::Meta::Requirements' do
@@ -221,11 +221,12 @@ class LinodeCli < Formula
   end
 
   resource 'WebService::Linode' do
-    url 'http://www.cpan.org/authors/id/M/MI/MIKEGRB/WebService-Linode-0.17.tar.gz'
-    sha1 'e3a40c7765e1f836935ffccd951f977d12a51067'
+    url 'http://www.cpan.org/authors/id/M/MI/MIKEGRB/WebService-Linode-0.18.tar.gz'
+    sha1 'eba1e6f4b16b2e0c3931060246b5c8f458d0b89e'
   end
 
   def install
+    ENV['PERL_MM_OPT'] = '';
     ENV.prepend_create_path 'PERL5LIB', libexec+'lib/perl5'
     binaries = %w{
       linode linode-linode linode-account linode-domain linode-stackscript
