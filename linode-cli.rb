@@ -2,8 +2,8 @@ require 'formula'
 
 class LinodeCli < Formula
   homepage 'https://github.com/linode/cli'
-  url 'https://github.com/linode/cli/archive/v1.1.0.tar.gz'
-  sha1 '4df836c1e4f09a21f4187850a1815f3992c912c2'
+  url 'https://github.com/linode/cli/archive/v1.1.1.tar.gz'
+  sha1 '02b263ee9ac076674837cc1f9c8e2acc0eb232b5'
 
   resource 'JSON' do
     url 'http://www.cpan.org/authors/id/M/MA/MAKAMAKA/JSON-2.90.tar.gz'
@@ -116,8 +116,8 @@ class LinodeCli < Formula
   end
 
   resource 'IO::Socket::SSL' do
-    url 'http://www.cpan.org/authors/id/S/SU/SULLR/IO-Socket-SSL-1.966.tar.gz'
-    sha1 '6d3d5ee71ebe44c59acd0be7523f4634b36e09de'
+    url 'http://www.cpan.org/authors/id/S/SU/SULLR/IO-Socket-SSL-1.967.tar.gz'
+    sha1 '0cce073c32715928dbb95e64696c6c7165f19ccb'
   end
 
   resource 'LWP::Protocol::https' do
@@ -211,8 +211,8 @@ class LinodeCli < Formula
   end
 
   resource 'Module::Build' do
-    url 'http://www.cpan.org/authors/id/L/LE/LEONT/Module-Build-0.4204.tar.gz'
-    sha1 'a4aa8e31d290ec2a2857393231fdee9e97730596'
+    url 'http://www.cpan.org/authors/id/L/LE/LEONT/Module-Build-0.4205.tar.gz'
+    sha1 '8b656cbc6fe813f9eec1cb63fc9d892ee8924192'
   end
 
   resource 'Module::Build::Tiny' do
