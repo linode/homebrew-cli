@@ -2,8 +2,8 @@ require 'formula'
 
 class LinodeCli < Formula
   homepage 'https://github.com/linode/cli'
-  url 'https://github.com/linode/cli/archive/v1.1.2.tar.gz'
-  sha1 '322a6cacb3f5e81a5056719925c2b53a0aecea56'
+  url 'https://github.com/linode/cli/archive/v1.2.0.tar.gz'
+  sha1 'f351c24aa13c9ecf0b01f71373d462cf5a2906e0'
 
   resource 'JSON' do
     url 'http://www.cpan.org/authors/id/M/MA/MAKAMAKA/JSON-2.90.tar.gz'
@@ -140,24 +140,24 @@ class LinodeCli < Formula
     sha1 'd2c6c5bd632e1fdf1ce5e59720bff1fe5992d997'
   end
 
+  resource 'JSON::PP' do
+    url 'http://www.cpan.org/authors/id/M/MA/MAKAMAKA/JSON-PP-2.27203.tar.gz'
+    sha1 '7659cd8b58ed42eae2c069f3181a8436c65ba895'
+  end
+
   resource 'Test::Simple' do
     url 'http://www.cpan.org/authors/id/R/RJ/RJBS/Test-Simple-1.001002.tar.gz'
     sha1 '179723fbb311d4785ede817ba7ecec43fb19d6d7'
   end
 
   resource 'CPAN::Meta::YAML' do
-    url 'http://www.cpan.org/authors/id/D/DA/DAGOLDEN/CPAN-Meta-YAML-0.010.tar.gz'
-    sha1 'e594e3cd2b371bac16d4186cde4187ef4b6d12b2'
-  end
-
-  resource 'JSON::PP' do
-    url 'http://www.cpan.org/authors/id/M/MA/MAKAMAKA/JSON-PP-2.27203.tar.gz'
-    sha1 '7659cd8b58ed42eae2c069f3181a8436c65ba895'
+    url 'http://www.cpan.org/authors/id/D/DA/DAGOLDEN/CPAN-Meta-YAML-0.011.tar.gz'
+    sha1 '2909f76ae0e271f7e5ce70df32b259a1c9d68a53'
   end
 
   resource 'Parse::CPAN::Meta' do
-    url 'http://www.cpan.org/authors/id/D/DA/DAGOLDEN/Parse-CPAN-Meta-1.4409.tar.gz'
-    sha1 '40378a62c71c44656744051fa7a70071ab409bba'
+    url 'http://www.cpan.org/authors/id/D/DA/DAGOLDEN/Parse-CPAN-Meta-1.4413.tar.gz'
+    sha1 '59d6cc3e7e0f336b22695459eb8a782f8e4b41f1'
   end
 
   resource 'version' do
@@ -216,13 +216,13 @@ class LinodeCli < Formula
   end
 
   resource 'Module::Build::Tiny' do
-    url 'http://www.cpan.org/authors/id/L/LE/LEONT/Module-Build-Tiny-0.034.tar.gz'
-    sha1 '232111ae43304a0199c8a300a631fa6618361d70'
+    url 'http://www.cpan.org/authors/id/L/LE/LEONT/Module-Build-Tiny-0.035.tar.gz'
+    sha1 '0fa85d0636c3d1d3b2782cf399363a4f945611b1'
   end
 
   resource 'WebService::Linode' do
-    url 'http://www.cpan.org/authors/id/M/MI/MIKEGRB/WebService-Linode-0.18.tar.gz'
-    sha1 'eba1e6f4b16b2e0c3931060246b5c8f458d0b89e'
+    url 'http://www.cpan.org/authors/id/M/MI/MIKEGRB/WebService-Linode-0.19.tar.gz'
+    sha1 '30407177e41ef1fc56820aa8713285b87c4d2509'
   end
 
   def install
@@ -372,17 +372,17 @@ class LinodeCli < Formula
       system 'make', 'install'
     end
 
+    resource('JSON::PP').stage do
+      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
+      system 'make', 'install'
+    end
+
     resource('Test::Simple').stage do
       system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
       system 'make', 'install'
     end
 
     resource('CPAN::Meta::YAML').stage do
-      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
-      system 'make', 'install'
-    end
-
-    resource('JSON::PP').stage do
       system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
       system 'make', 'install'
     end
