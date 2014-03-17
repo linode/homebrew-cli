@@ -2,8 +2,8 @@ require 'formula'
 
 class LinodeCli < Formula
   homepage 'https://github.com/linode/cli'
-  url 'https://github.com/linode/cli/archive/v1.2.0.tar.gz'
-  sha1 'f351c24aa13c9ecf0b01f71373d462cf5a2906e0'
+  url 'https://github.com/linode/cli/archive/v1.3.0.tar.gz'
+  sha1 '1434528a1f4d7ae71dd9f06ceeb1d7f068b6e576'
 
   resource 'JSON' do
     url 'http://www.cpan.org/authors/id/M/MA/MAKAMAKA/JSON-2.90.tar.gz'
@@ -116,8 +116,8 @@ class LinodeCli < Formula
   end
 
   resource 'IO::Socket::SSL' do
-    url 'http://www.cpan.org/authors/id/S/SU/SULLR/IO-Socket-SSL-1.967.tar.gz'
-    sha1 '0cce073c32715928dbb95e64696c6c7165f19ccb'
+    url 'http://www.cpan.org/authors/id/S/SU/SULLR/IO-Socket-SSL-1.969.tar.gz'
+    sha1 '0af65f7cad1b10a30b0aa49fb66ab50fa44913c0'
   end
 
   resource 'LWP::Protocol::https' do
@@ -151,13 +151,13 @@ class LinodeCli < Formula
   end
 
   resource 'CPAN::Meta::YAML' do
-    url 'http://www.cpan.org/authors/id/D/DA/DAGOLDEN/CPAN-Meta-YAML-0.011.tar.gz'
-    sha1 '2909f76ae0e271f7e5ce70df32b259a1c9d68a53'
+    url 'http://www.cpan.org/authors/id/D/DA/DAGOLDEN/CPAN-Meta-YAML-0.012.tar.gz'
+    sha1 'a8dcaccedf8ebf56667289f12d76c05bff8379da'
   end
 
   resource 'Parse::CPAN::Meta' do
-    url 'http://www.cpan.org/authors/id/D/DA/DAGOLDEN/Parse-CPAN-Meta-1.4413.tar.gz'
-    sha1 '59d6cc3e7e0f336b22695459eb8a782f8e4b41f1'
+    url 'http://www.cpan.org/authors/id/D/DA/DAGOLDEN/Parse-CPAN-Meta-1.4414.tar.gz'
+    sha1 'a6499fe30e87cfcf71a0f77adb4083bbf4b0429e'
   end
 
   resource 'version' do
@@ -171,13 +171,13 @@ class LinodeCli < Formula
   end
 
   resource 'CPAN::Meta' do
-    url 'http://www.cpan.org/authors/id/D/DA/DAGOLDEN/CPAN-Meta-2.133380.tar.gz'
-    sha1 '3845dfdcb4e9ce12a1a9ff825bb6c45d725ac422'
+    url 'http://www.cpan.org/authors/id/D/DA/DAGOLDEN/CPAN-Meta-2.140640.tar.gz'
+    sha1 'f612221e15f654c2a5994699873a0881e71c3c3c'
   end
 
   resource 'ExtUtils::Helpers' do
-    url 'http://www.cpan.org/authors/id/L/LE/LEONT/ExtUtils-Helpers-0.021.tar.gz'
-    sha1 '7cdb1c408095cd7e91eb28df0bbfc19bbf07b28e'
+    url 'http://www.cpan.org/authors/id/L/LE/LEONT/ExtUtils-Helpers-0.022.tar.gz'
+    sha1 '56ebff587460bbf48b8eb93f1ad35561d5f5052d'
   end
 
   resource 'ExtUtils::Config' do
@@ -201,13 +201,13 @@ class LinodeCli < Formula
   end
 
   resource 'ExtUtil' do
-    url 'http://www.cpan.org/authors/id/A/AM/AMBS/ExtUtils/ExtUtils-CBuilder-0.280212.tar.gz'
-    sha1 '9d96ad35fc73dd450488e1d993146dc7bbe06483'
+    url 'http://www.cpan.org/authors/id/A/AM/AMBS/ExtUtils/ExtUtils-CBuilder-0.280216.tar.gz'
+    sha1 'f13c42bbe82ed3e1d99649624c10f3da3c171c13'
   end
 
   resource 'ExtUtils::ParseXS' do
-    url 'http://www.cpan.org/authors/id/S/SM/SMUELLER/ExtUtils-ParseXS-3.22.tar.gz'
-    sha1 'fe70cf62e66775c04436d58d18f4773924630a98'
+    url 'http://www.cpan.org/authors/id/S/SM/SMUELLER/ExtUtils-ParseXS-3.24.tar.gz'
+    sha1 '8c816184ea170880a54e13ea47392f35425dc8e3'
   end
 
   resource 'Module::Build' do
@@ -221,8 +221,8 @@ class LinodeCli < Formula
   end
 
   resource 'WebService::Linode' do
-    url 'http://www.cpan.org/authors/id/M/MI/MIKEGRB/WebService-Linode-0.19.tar.gz'
-    sha1 '30407177e41ef1fc56820aa8713285b87c4d2509'
+    url 'http://www.cpan.org/authors/id/M/MI/MIKEGRB/WebService-Linode-0.20.tar.gz'
+    sha1 '3bee70876126303e180fdfdecce48baac5deb237'
   end
 
   def install
@@ -348,6 +348,10 @@ class LinodeCli < Formula
     end
 
     resource('IO::Socket::SSL').stage do
+      inreplace 'Makefile.PL' do |s|
+        s.gsub! 'my $xt = prompt( "Should I do external tests?\n".',
+                'my $xt = \'no\' || prompt( "Should I do external tests?\n".'
+      end
       system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
       system 'make', 'install'
     end
