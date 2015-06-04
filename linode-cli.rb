@@ -216,8 +216,8 @@ class LinodeCli < Formula
   end
 
   resource 'Module::Build::Tiny' do
-    url 'http://www.cpan.org/authors/id/L/LE/LEONT/Module-Build-Tiny-0.035.tar.gz'
-    sha1 '0fa85d0636c3d1d3b2782cf399363a4f945611b1'
+    url 'http://www.cpan.org/authors/id/L/LE/LEONT/Module-Build-Tiny-0.039.tar.gz'
+    sha1 '2127b3e52d59c545ff587ca127ee1686f2a50177'
   end
 
   resource 'WebService::Linode' do
