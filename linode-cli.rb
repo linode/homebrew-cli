@@ -221,8 +221,8 @@ class LinodeCli < Formula
   end
 
   resource 'WebService::Linode' do
-    url 'http://www.cpan.org/authors/id/M/MI/MIKEGRB/WebService-Linode-0.20.tar.gz'
-    sha1 '3bee70876126303e180fdfdecce48baac5deb237'
+    url 'http://www.cpan.org/authors/id/M/MI/MIKEGRB/WebService-Linode-0.26.tar.gz'
+    sha1 '088e53005cccf101e11ebd1cf9360e8ec962faee'
   end
 
   def install
