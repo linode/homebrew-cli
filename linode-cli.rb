@@ -2,8 +2,8 @@ require 'formula'
 
 class LinodeCli < Formula
   homepage 'https://github.com/linode/cli'
-  url 'https://github.com/linode/cli/archive/v1.4.6.tar.gz'
-  sha1 '5e687835d5c3fb912287b474f55acc491539a16e'
+  url 'https://github.com/linode/cli/archive/v1.4.7.tar.gz'
+  sha1 'b8e60becf2e90866858213e71d8040605f917794'
 
   resource 'JSON' do
     url 'http://www.cpan.org/authors/id/M/MA/MAKAMAKA/JSON-2.90.tar.gz'
