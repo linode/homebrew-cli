@@ -110,11 +110,6 @@ class LinodeCli < Formula
     sha1 '78613f8c77793032ddf10a88ef5182592b96d553'
   end
 
-  resource 'Net::SSLeay' do
-    url 'http://www.cpan.org/authors/id/M/MI/MIKEM/Net-SSLeay-1.58.tar.gz'
-    sha1 'fe0f5a8b3d66c2b5371822f88b78dac42db67c79'
-  end
-
   resource 'IO::Socket::SSL' do
     url 'http://www.cpan.org/authors/id/S/SU/SULLR/IO-Socket-SSL-1.969.tar.gz'
     sha1 '0af65f7cad1b10a30b0aa49fb66ab50fa44913c0'
@@ -123,11 +118,6 @@ class LinodeCli < Formula
   resource 'LWP::Protocol::https' do
     url 'http://www.cpan.org/authors/id/G/GA/GAAS/LWP-Protocol-https-6.04.tar.gz'
     sha1 '5a63cb409ff4ba34006d5a45120e7facc52dc837'
-  end
-
-  resource 'Crypt::SSLeay' do
-    url 'http://www.cpan.org/authors/id/N/NA/NANIS/Crypt-SSLeay-0.64.tar.gz'
-    sha1 '081d3d30aa89e481374eaedf2d28661bcb7beada'
   end
 
   resource 'Test::Harness' do
@@ -339,14 +329,6 @@ class LinodeCli < Formula
       system 'make', 'install'
     end
 
-    resource('Net::SSLeay').stage do
-      inreplace 'inc/Module/Install/PRIVATE/Net/SSLeay.pm' do |s|
-        s.gsub! 'if ( $self->prompt(', 'if ( 0 && $self->prompt('
-      end
-      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
-      system 'make', 'install'
-    end
-
     resource('IO::Socket::SSL').stage do
       inreplace 'Makefile.PL' do |s|
         s.gsub! 'my $xt = prompt( "Should I do external tests?\n".',
@@ -358,11 +340,6 @@ class LinodeCli < Formula
 
     resource('LWP::Protocol::https').stage do
       system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}"
-      system 'make', 'install'
-    end
-
-    resource('Crypt::SSLeay').stage do
-      system 'perl', 'Makefile.PL', "INSTALL_BASE=#{libexec}", '-n'
       system 'make', 'install'
     end
 
