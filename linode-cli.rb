@@ -126,8 +126,8 @@ class LinodeCli < Formula
   end
 
   resource 'Scalar::List::Utils' do
-    url 'http://www.cpan.org/authors/id/P/PE/PEVANS/Scalar-List-Utils-1.41.tar.gz'
-    sha1 'afc782964abdc7ea5cf6655359a4e462b923875e'
+    url 'http://www.cpan.org/authors/id/P/PE/PEVANS/Scalar-List-Utils-1.44.tar.gz'
+    sha1 '2b9facc5e1145d181d546487edcc2dcf5fc91631'
   end
 
   resource 'JSON::PP' do
