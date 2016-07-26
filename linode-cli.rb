@@ -141,13 +141,13 @@ class LinodeCli < Formula
   end
 
   resource 'CPAN::Meta::YAML' do
-    url 'http://www.cpan.org/authors/id/D/DA/DAGOLDEN/CPAN-Meta-YAML-0.012.tar.gz'
-    sha1 'a8dcaccedf8ebf56667289f12d76c05bff8379da'
+    url 'http://www.cpan.org/authors/id/D/DA/DAGOLDEN/CPAN-Meta-YAML-0.018.tar.gz'
+    sha1 'e540fc207c0ace3041abfec2c90cf54d510ce9fa'
   end
 
   resource 'Parse::CPAN::Meta' do
-    url 'http://www.cpan.org/authors/id/D/DA/DAGOLDEN/Parse-CPAN-Meta-1.4414.tar.gz'
-    sha1 'a6499fe30e87cfcf71a0f77adb4083bbf4b0429e'
+    url 'http://www.cpan.org/authors/id/D/DA/DAGOLDEN/Parse-CPAN-Meta-1.4422.tar.gz'
+    sha1 '3f96ecfbeab892d6c309aa5d7510d3df190f50b3'
   end
 
   resource 'version' do
@@ -156,13 +156,13 @@ class LinodeCli < Formula
   end
 
   resource 'CPAN::Meta::Requirements' do
-    url 'http://www.cpan.org/authors/id/D/DA/DAGOLDEN/CPAN-Meta-Requirements-2.125.tar.gz'
-    sha1 '1d0d20024c531354094ca9a1609fad694b8db7d3'
+    url 'http://www.cpan.org/authors/id/D/DA/DAGOLDEN/CPAN-Meta-Requirements-2.140.tar.gz'
+    sha1 '8dad15fa876859a175680550fe68dc09e9f3c118'
   end
 
   resource 'CPAN::Meta' do
-    url 'http://www.cpan.org/authors/id/D/DA/DAGOLDEN/CPAN-Meta-2.140640.tar.gz'
-    sha1 'f612221e15f654c2a5994699873a0881e71c3c3c'
+    url 'http://www.cpan.org/authors/id/D/DA/DAGOLDEN/CPAN-Meta-2.150005.tar.gz'
+    sha1 '2d75030bc177dedc98cc2cbd396d98943da5f86b'
   end
 
   resource 'ExtUtils::Helpers' do
@@ -186,13 +186,13 @@ class LinodeCli < Formula
   end
 
   resource 'Perl::OSType' do
-    url 'http://www.cpan.org/authors/id/D/DA/DAGOLDEN/Perl-OSType-1.007.tar.gz'
-    sha1 'b04781569df225919440d1ca4124c835457c8910'
+    url 'http://www.cpan.org/authors/id/D/DA/DAGOLDEN/Perl-OSType-1.010.tar.gz'
+    sha1 '55f74bc6b5462d6a628f396166150f683c34a039'
   end
 
   resource 'ExtUtil' do
-    url 'http://www.cpan.org/authors/id/A/AM/AMBS/ExtUtils/ExtUtils-CBuilder-0.280216.tar.gz'
-    sha1 'f13c42bbe82ed3e1d99649624c10f3da3c171c13'
+    url 'http://www.cpan.org/authors/id/A/AM/AMBS/ExtUtils-CBuilder-0.280224.tar.gz'
+    sha1 '5dc79083f031fcb2d1e989e0bc00526885d851f7'
   end
 
   resource 'ExtUtils::ParseXS' do
