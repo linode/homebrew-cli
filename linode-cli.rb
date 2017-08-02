@@ -136,8 +136,8 @@ class LinodeCli < Formula
   end
 
   resource 'Test::Simple' do
-    url 'http://www.cpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302085.tar.gz'
-    sha256 '4fa8ffa0b797f0f22fb8745469f8a99c333f46897c171fb762434f3dea221fb2'
+    url 'http://www.cpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302086.tar.gz'
+    sha256 '21e4c93c52529a10ef970afcf2cdb5719bcfef5f71af09cad3675fcf021995b1'
   end
 
   resource 'CPAN::Meta::YAML' do
