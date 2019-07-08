@@ -181,8 +181,8 @@ class LinodeCli < Formula
   end
 
   resource 'Module::Metadata' do
-    url 'http://www.cpan.org/authors/id/E/ET/ETHER/Module-Metadata-1.000027.tar.gz'
-    sha256 'e2f7dcb48e826d9cb4c08ca8d7e1a1d4ceaa7725f1245eb30c71ecbd119132e7'
+    url 'http://www.cpan.org/authors/id/E/ET/ETHER/Module-Metadata-1.000036.tar.gz'
+    sha256 '1c70e438cec1f7f99a5cccd4529efb4ee0fb7ca958ca885ebf09952015b957aa'
   end
 
   resource 'Perl::OSType' do
